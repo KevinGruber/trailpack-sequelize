@@ -28,6 +28,21 @@ module.exports = {
       dialect: 'sqlite'
     }
     */
+   
+    /**
+     * if you want to use more than one orm you have to specify orm and options.
+     */
+    /*
+    sqlitedev: {
+      orm: 'sequelize',
+      options: {
+        database: 'dev',
+        storage: './.tmp/dev.sqlite',
+        host: '127.0.0.1',
+        dialect: 'sqlite'
+      }
+    }
+    */
   },
 
   models: {

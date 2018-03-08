@@ -192,6 +192,15 @@ module.exports = _.defaultsDeep({
           storage: './test/test.sqlite',
           database: 'test'
         },
+        storeoverride: {
+          orm: 'sequelize',
+          options: {
+            host: 'localhost',
+            dialect: 'sqlite',
+            storage: './test/test.sqlite',
+            database: 'test'
+          }
+        },
         uristore: {
           uri: 'sqlite://testuser:password@testhost:1234/testdb'
         }

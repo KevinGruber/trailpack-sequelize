@@ -23,7 +23,6 @@ module.exports = class SequelizeTrailpack extends Trailpack {
    * Merge configuration into models, load Sequelize collections.
    */
   configure() {
-    this.app.config.database.orm = 'sequelize'
     _.merge(this.app.config, lib.FailsafeConfig)
   }
 
@@ -35,7 +34,9 @@ module.exports = class SequelizeTrailpack extends Trailpack {
     super.initialize()
 
     this.orm = this.orm || {}
-    this.app.orm = {}
+    if (!this.app.orm) {
+      this.app.orm = {};
+    }
     this.connections = lib.Transformer.transformStores(this.app)
     this.models = lib.Transformer.transformModels(this.app)
 
