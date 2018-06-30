@@ -1,2 +1,2 @@
-exports.SchemaMigrationService = require('./SchemaMigrationService')
-exports.FootprintService = require('./FootprintService')
+exports.SequelizeSchemaMigrationService = require('./SchemaMigrationService')
+exports.SequelizeFootprintService = require('./FootprintService')

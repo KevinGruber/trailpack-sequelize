@@ -75,7 +75,7 @@ module.exports = class SequelizeTrailpack extends Trailpack {
   }
 
   migrate() {
-    const SchemaMigrationService = this.app.services.SchemaMigrationService
+    const SchemaMigrationService = this.app.services.SequelizeSchemaMigrationService
     const database = this.app.config.database
 
     if (database.models.migrate == 'none') return
